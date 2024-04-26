@@ -16,7 +16,7 @@ while (condition === true) {
         let addTodo = await inquirer.prompt([{
                 name: "todo",
                 type: "input",
-                message: chalk.magenta("Add items in the list:"),
+                message: chalk.magenta("Add items in the list:")
             }]);
         todosList.push(addTodo.todo);
         console.log(todosList);
@@ -32,7 +32,7 @@ while (condition === true) {
         let addTodo = await inquirer.prompt([{
                 name: "todo",
                 type: "input",
-                message: chalk.magenta("Add items in the list:"),
+                message: chalk.magenta("Add items in the list:")
             }]);
         let newTodo = todosList.filter(val => val !== updateTodo.todo);
         todosList = [...newTodo, addTodo.todo];

@@ -17,19 +17,20 @@ while (condition === true) {
         choices: ["Add", "Update", "Delete", "View", "Exit"]
     }]);
 
+
     // ---------------------ADD-----------------------
 
     if (selectOption.option === "Add") {
         let addTodo = await inquirer.prompt([{
             name: "todo",
             type: "input",
-            message: chalk.magenta("Add items in the list:"),
+            message: chalk.magenta("Add items in the list:")
         }]);
 
         todosList.push(addTodo.todo);
         console.log(todosList);
-        }
-
+    }    
+    
     //---------------------UPDATE---------------------
 
     if (selectOption.option === "Update") {
@@ -43,14 +44,14 @@ while (condition === true) {
         let addTodo = await inquirer.prompt([{
             name: "todo",
             type: "input",
-            message: chalk.magenta("Add items in the list:"),
+            message: chalk.magenta("Add items in the list:")
         }]);
 
         let newTodo = todosList.filter(val => val !== updateTodo.todo);
         todosList = [...newTodo,addTodo.todo];
         console.log(todosList);
-        } 
-        
+    } 
+          
     //---------------------Delete----------------------
 
     if (selectOption.option === "Delete") {
@@ -64,8 +65,8 @@ while (condition === true) {
         let newTodo = todosList.filter(val => val !== deleteTodo.todo);
         todosList = [...newTodo];
         console.log(todosList);
-       }
-
+    }
+    
     //---------------------View-----------------------
 
     if (selectOption.option === "View") {
